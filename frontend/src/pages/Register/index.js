@@ -5,6 +5,7 @@ import { FiArrowLeft } from 'react-icons/fi';
 import './styles.css';
 import Logo from '../../assets/logo.svg';
 
+
 export default function Register() {
     const [name, setName] = useState('');
     const [email, setEmail] = useState('');
@@ -47,7 +48,7 @@ export default function Register() {
 
                     <Link className="back-link" to="/m start">
                         <FiArrowLeft size={16} color='#E02041' />
-                        Não tenho cadastro
+                        Já tenho cadastro
                     </Link>
                 </section>
                 <form onSubmit={HandleRegister}>
@@ -63,14 +64,14 @@ export default function Register() {
                         onChange={e => setEmail(e.target.value)}
                     />
                     <input
-                        placeholder="whatsapp"
+                        placeholder="Telefone"
                         value={whatsapp}
                         onChange={e => setWhatsapp(e.target.value)}
                     />
 
                     <div className="input-group">
                         <input
-                            placeholder="Nome da Cidade"
+                            placeholder="Cidade"
                             value={city}
                             onChange={e => setCity(e.target.value)}
                         />
